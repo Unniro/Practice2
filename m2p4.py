@@ -14,4 +14,4 @@ for i in range(len(numbers)):
     else:
         not_primes.append(numbers[i])
 print('Primes: ', primes)
-print('Not Primes: ', not_primes)/
+print('Not Primes: ', not_primes)
