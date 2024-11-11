@@ -11,3 +11,4 @@ for i in range(1, digit // 2 + 1):
             continue
         result.append(j)
 print('Ваш пароль:', *result)
+
