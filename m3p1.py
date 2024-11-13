@@ -6,11 +6,14 @@ def count_calls():
     return calls
 def string_info(string):
     count_calls()
-    string = (len(string), string.count())
+    #string = (len(string), string.count())
     return string
 def is_contains(string, list_to_search):
     count_calls()
-
+    if list_to_search() == string:
+        return is_contains == True
+    else:
+        return is_contains == False
 string_info(input())
 print(string_info('Capybara'))
 print(string_info('Armageddon'))
