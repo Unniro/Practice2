@@ -1,11 +1,14 @@
 #Задача "Рассылка писем"
 def send_email(message, recipient, sender = 'university.help@gmail.com'):
     rashir = ['.com', '.ru', '.net']
+    rec = str(recipient.endswith)
+    for i in rashir:
+        if (recipient.endswith, sender.endswith) != i:
     #if not any(item in str(recipient.endswith) for item in rashir):
-    if not recipient.endswith('.com') and recipient.endswith('.ru') and recipient.endswith('.net') and sender.endswith('.com') and sender.endswith('.ru') and sender.endswith('.net'):
-        print(f'Невозможно отправить письмо с адреса {sender} на адрес {recipient}')
-        print(str(recipient.endswith))
-    elif sender == recipient:
+    #if not recipient.endswith('.com') and recipient.endswith('.ru') and recipient.endswith('.net') and sender.endswith('.com') and sender.endswith('.ru') and sender.endswith('.net'):
+            print(f'Невозможно отправить письмо с адреса {sender} на адрес {recipient}')
+            print(recipient.endswith)
+    if sender == recipient:
         print('Нельзя отправить письмо самому себе!')
     elif sender == 'university.help@gmail.com':
         print(f'Письмо успешно отправлено с адреса {sender} на адрес {recipient}')
