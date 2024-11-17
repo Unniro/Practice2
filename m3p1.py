@@ -2,19 +2,20 @@
 calls = 0
 def count_calls():
     global calls
-    calls = calls + 1
+    calls += 1
     return calls
 def string_info(string):
     count_calls()
-    #string = (len(string), string.count())
+    string = (len(string), string.upper(), string.lower())
     return string
 def is_contains(string, list_to_search):
     count_calls()
-    if list_to_search() == string:
-        return is_contains == True
+    copy_list_to_search = [j.casefold() for j in list_to_search]
+    for i in range(len(list_to_search)):
+        if string.casefold() in copy_list_to_search:
+            return True
     else:
-        return is_contains == False
-string_info(input())
+        return False
 print(string_info('Capybara'))
 print(string_info('Armageddon'))
 print(is_contains('Urban', ['ban', 'BaNaN', 'urBAN']))  # Urban ~ urBAN
