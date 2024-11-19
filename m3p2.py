@@ -1,7 +1,8 @@
-#Задача "Рассылка писем"
-def send_email(message, recipient, sender = 'university.help@gmail.com'):
+# Задача "Рассылка писем"
+def send_email(message, recipient, sender='university.help@gmail.com'):
     rashir = ('.com', '.ru', '.net')
-    if recipient.find('@') is False and sender.find('@') is False or recipient.endswith(rashir) is False or sender.endswith(rashir) is False:
+    if recipient.find('@') is False and sender.find('@') is False or recipient.endswith(
+            rashir) is False or sender.endswith(rashir) is False:
         print(f'Невозможно отправить письмо с адреса {sender} на адрес {recipient}')
     elif sender == recipient:
         print('Нельзя отправить письмо самому себе!')
@@ -9,6 +10,8 @@ def send_email(message, recipient, sender = 'university.help@gmail.com'):
         print(f'Письмо успешно отправлено с адреса {sender} на адрес {recipient}')
     else:
         print(f'НЕСТАНДАРТНЫЙ ОТПРАВИТЕЛЬ! Письмо отправлено с адреса {sender} на адрес {recipient}')
+
+
 send_email('Это сообщение для проверки связи', 'vasyok1337@gmail.com')
 send_email('Вы видите это сообщение как лучший студент курса!', 'urban.fan@mail.ru', sender='urban.info@gmail.com')
 send_email('Пожалуйста, исправьте задание', 'urban.student@mail.ru', sender='urban.teacher@mail.uk')
