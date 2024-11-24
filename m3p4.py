@@ -1,10 +1,11 @@
 # Задача "Однокоренные"
 def single_root_words(root_word, *other_words):
     same_words = []
-    if other_words.count(root_word) == 1:
-        same_words.append(other_words)
-        print(same_words)
-        print(root_word, other_words)
+    word1 = root_word.casefold()
+    for i in other_words:
+        word2 = i.casefold()
+        if word1.count(word2) or word2.count(word1):
+            same_words.append(i)
     return same_words
 
 
