@@ -1,7 +1,10 @@
 # Задача "Рассылка писем"
 def send_email(message, recipient, sender='university.help@gmail.com'):
     rashir = ('.com', '.ru', '.net')
-    if recipient.find('@') is False and sender.find('@') is False or recipient.endswith(rashir) is False or sender.endswith(rashir) is False:
+    if ('@' in recipient) == False \
+            or ('@' in sender) == False \
+            or recipient.endswith(rashir) == False \
+            or sender.endswith(rashir) == False:
         print(f'Невозможно отправить письмо с адреса {sender} на адрес {recipient}')
     elif sender == recipient:
         print('Нельзя отправить письмо самому себе!')
